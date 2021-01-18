@@ -1,3 +1,3 @@
 | method | url                                | header                        | body    |
 |--------|------------------------------------|-------------------------------|---------|
-| POST   | http://localhost:3000/api-kbbi/v1/ | Content-Type:application/json | keyword |
+| POST   | https://api-kbbi.herokuapp.com/cari | Content-Type:application/json | keyword |
