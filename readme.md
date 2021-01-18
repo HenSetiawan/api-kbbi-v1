@@ -5,7 +5,7 @@
 
 ``` javascript
 const data = { keyword:'makan'};
-fetch('http://localhost:3000/cari', {
+fetch('https://api-kbbi.herokuapp.com/cari', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
