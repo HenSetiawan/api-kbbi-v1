@@ -3,7 +3,7 @@
 | POST   | https://api-kbbi.herokuapp.com/cari | Content-Type:application/json | keyword |
 
 
-```
+``` javascript
 const data = { keyword:'makan'};
 fetch('http://localhost:3000/cari', {
   method: 'POST',
