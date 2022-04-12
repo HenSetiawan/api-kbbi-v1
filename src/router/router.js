@@ -4,14 +4,14 @@ const searchController=require('../controller/searchController');
 require('dotenv').config()
 
 
-route.post('/cari',searchController.search);
+route.get('/:keyword',searchController.search);
 route.use('',(req,res)=>{
     res.status(200).json(
         {
             endpoint:process.env.ENDPOINT,
             source:process.env.SOURCE,
-            method:'post',
-            body:'keyword'
+            method:'GET',
+            example:"/makan"
         }
     )
 })

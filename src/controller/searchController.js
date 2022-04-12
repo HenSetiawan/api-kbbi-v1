@@ -5,12 +5,12 @@ require('dotenv').config();
 
 exports.search=async (req,res)=>{
 
-    if(req.body.keyword===undefined){
+    if(req.params.keyword===undefined){
         res.status(300)
         .json({msg:"keyword not found"});
         return
     }
-    const keyword=req.body.keyword;
+    const keyword=req.params.keyword;
     const kbbiUrl=`https://kbbi.kemdikbud.go.id/entri/${keyword}`;
 
     https.get(kbbiUrl, (response) => {
