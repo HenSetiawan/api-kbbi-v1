@@ -1,22 +1,19 @@
-| method | url                                | header                        | body    |
-|--------|------------------------------------|-------------------------------|---------|
-| POST   | https://api-kbbi.herokuapp.com/cari | Content-Type:application/json | keyword |
+| method | url                                      | header                        |
+| ------ | ---------------------------------------- | ----------------------------- |
+| GET    | https://api-kbbi.herokuapp.com/{keyword} | Content-Type:application/json |
 
-
-``` javascript
-const data = { keyword:'makan'};
-fetch('https://api-kbbi.herokuapp.com/cari', {
-  method: 'POST',
+```javascript
+const keyword = "makan";
+fetch(`https://api-kbbi.herokuapp.com/${keyword}`, {
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
-  body: JSON.stringify(data),
 })
-.then(response => response.json())
-.then(data => {
-  console.log('Success:', data);
-})
-.catch((error) => {
-  console.error('Error:', error);
-});
+  .then((response) => response.json())
+  .then((data) => {
+    console.log("Success:", data);
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 ```
